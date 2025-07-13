@@ -1,0 +1,63 @@
+# SapientLab Documentation Site
+title: "SapientLab: Where Wisdom Meets Innovation"
+description: "Educational Platform for Children Ages 4-11 (Reception through Year 6)"
+url: "https://montionugera.github.io"
+baseurl: "/sapient-lab-docs"
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Site settings
+author: "SapientLab Team"
+email: "contact@sapientlab.com"
+social_links:
+  github: montionugera/sapient-lab
+
+# Navigation
+header_pages:
+  - subjects/mathematics.md
+  - curriculum/overview.md
+  - development/roadmap.md
+  - guides/getting-started.md
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Collections
+collections:
+  subjects:
+    output: true
+    permalink: /:collection/:name/
+  guides:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "subjects"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: "page"
+
+# SEO
+google_analytics: # Add your GA tracking ID
+lang: en_GB 
